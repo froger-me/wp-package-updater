@@ -19,7 +19,7 @@ Before deploying the plugin or theme, make sure to change the following value:
 #### Simple update
 
 ```php
-require_once plugin_dir_path( __FILE__ ) . 'lib/wp-plugin-updater/class-wp-package-updater.php';
+require_once plugin_dir_path( __FILE__ ) . 'lib/wp-package-updater/class-wp-package-updater.php';
 
 $prefix_updater = new WP_Package_Updater(
   'https://your-update-server.com',
@@ -31,7 +31,7 @@ $prefix_updater = new WP_Package_Updater(
 #### Update with license check
 
 ```php
-require_once plugin_dir_path( __FILE__ ) . 'lib/wp-plugin-updater/class-wp-package-updater.php';
+require_once plugin_dir_path( __FILE__ ) . 'lib/wp-package-updater/class-wp-package-updater.php';
 
 $prefix_updater = new WP_Package_Updater(
   'https://your-update-server.com',
@@ -47,7 +47,7 @@ $prefix_updater = new WP_Package_Updater(
 #### Simple update
 
 ```php
-require_once get_stylesheet_directory() . '/lib/wp-plugin-updater/class-wp-plugin-updater.php';
+require_once get_stylesheet_directory() . '/lib/wp-package-updater/class-wp-package-updater.php';
 
 $prefix_updater = new WP_Package_Updater(
   'https://your-update-server.com',
@@ -59,7 +59,7 @@ $prefix_updater = new WP_Package_Updater(
 #### Update with license check
 
 ```php
-require_once get_stylesheet_directory() . '/lib/wp-plugin-updater/class-wp-plugin-updater.php';
+require_once get_stylesheet_directory() . '/lib/wp-package-updater/class-wp-package-updater.php';
 
 $prefix_updater = new WP_Package_Updater(
   'https://your-update-server.com',

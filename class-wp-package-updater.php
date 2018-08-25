@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 **/
 
 /** Uncomment for plugin updates **/
-// require_once plugin_dir_path( __FILE__ ) . 'lib/wp-plugin-updater/class-wp-package-updater.php';
+// require_once plugin_dir_path( __FILE__ ) . 'lib/wp-package-updater/class-wp-package-updater.php';
 
 /** Enable plugin updates with license check **/
 // $prefix_updater = new WP_Package_Updater(
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // );
 
 /** Uncomment for theme updates **/
-// require_once get_stylesheet_directory() . '/lib/wp-plugin-updater/class-wp-plugin-updater.php';
+// require_once get_stylesheet_directory() . '/lib/wp-package-updater/class-wp-package-updater.php';
 
 /** Enable theme updates with license check **/
 // $prefix_updater = new WP_Package_Updater(
