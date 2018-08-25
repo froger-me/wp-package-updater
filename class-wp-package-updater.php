@@ -5,7 +5,7 @@
  *
  * @author Alexandre Froger
  * @version 1.0.0
- * @see https://github.com/froger-me/wp-plugin-updater
+ * @see https://github.com/froger-me/wp-package-updater
  * @copyright Alexandre Froger - https://www.froger.me
  */
 if ( ! defined( 'ABSPATH' ) ) {
