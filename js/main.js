@@ -1,6 +1,13 @@
-/* version 1.0.0 */
+/* version 1.4.0 */
 /* global WP_PackageUpdater */
 jQuery(document).ready(function($) {
+
+	var labelTheme = $('.appearance_page_theme-license .wrap-license label');
+	
+	labelTheme.css('display', 'block');
+	labelTheme.css('margin-bottom', '10px');
+	$('.appearance_page_theme-license .wrap-license input[type="text"]').css('width', '50%');
+	$('.appearance_page_theme-license .postbox').show();
 
 	$('.wrap-license .activate-license').on('click', function(e) {
 		e.preventDefault();
@@ -9,6 +16,7 @@ jQuery(document).ready(function($) {
 			data             = {
 			'nonce' : licenseContainer.data('nonce'),
 			'license_key' : licenseContainer.find('.license').val(),
+			'package_slug' : licenseContainer.data('package_slug'),
 			'action' : WP_PackageUpdater.action_prefix + '_activate_license'
 		};
 
@@ -22,6 +30,7 @@ jQuery(document).ready(function($) {
 					licenseContainer.find('.current-license').html(licenseContainer.find('.license').val());
 					licenseContainer.find('.current-license-error').hide();
 					licenseContainer.find('.license-message').show();
+					$( '.license-error-' + licenseContainer.data('package_slug') + '.notice' ).hide();
 				} else {
 					var errorContainer = licenseContainer.find('.current-license-error');
 					
@@ -48,6 +57,7 @@ jQuery(document).ready(function($) {
 			data             = {
 			'nonce' : licenseContainer.data('nonce'),
 			'license_key' : licenseContainer.find('.license').val(),
+			'package_slug' : licenseContainer.data('package_slug'),
 			'action' : WP_PackageUpdater.action_prefix + '_deactivate_license'
 		};
 
