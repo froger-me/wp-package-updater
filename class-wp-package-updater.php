@@ -74,6 +74,7 @@ if ( ! class_exists( 'WP_Package_Updater' ) ) {
 
 		private $license_server_url;
 		private $package_slug;
+		private $package_id;
 		private $update_server_url;
 		private $package_path;
 		private $package_url;
